@@ -1,4 +1,4 @@
-﻿import re
+import re
 
 def clean_noisy_text(raw_text):
     text = re.sub(r'\n+', '\n', raw_text)

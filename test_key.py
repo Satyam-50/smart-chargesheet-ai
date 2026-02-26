@@ -1,8 +1,6 @@
-import google.generativeai as genai
+import google.genai as genai
 
-genai.configure(api_key="AIzaSyA63WfbVo7Uru8J2ZTaQX0xIIOluf8SCD0")
-
-model = genai.GenerativeModel("gemini-1.5-flash")
-response = model.generate_content("Say hello")
-
+# simple key test using the new Client interface
+client = genai.Client(api_key="AIzaSyBr2gqb614oXu2JUPQKfUIOdakTWoO6V_E")
+response = client.models.generate_content(model="gemini-1.5-flash", contents="Say hello")
 print(response.text)
